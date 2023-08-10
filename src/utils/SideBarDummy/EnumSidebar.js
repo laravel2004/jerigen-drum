@@ -3,12 +3,12 @@ const EnumSidebar = () => {
     {
       href : "/",
       nav : "Home",
-      icon : "fa fa-house"
+      icon : "faHouse"
     },
     {
       href : "/produk",
       nav : "Produk",
-      icon : "fa fa-cart-shopping"
+      icon : "faCartShopping"
     },
     {
       href : "/client",
@@ -18,7 +18,7 @@ const EnumSidebar = () => {
     {
       href : "/contact-me",
       nav : "Hubungi Kami",
-      icon : "fa fa-phone"
+      icon : "faPhone"
     },
   ]
 }

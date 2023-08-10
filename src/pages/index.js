@@ -10,12 +10,23 @@ import cepat from "./../../public/img/cepat.jpg"
 import { CardProduct } from "./components/card/card";
 import { EnumCard } from "@/utils/Card/EnumCardDummy";
 import { useRouter } from "next/router";
+import { EnumProduct } from "@/utils/Product/EnumProductDummy";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const dummyCard = EnumCard()
+  const dummyCard = EnumProduct()
   const router = useRouter()
+
+  const OnCLickProduct = (props) => {
+    const listProduct = EnumProduct()
+    listProduct.forEach(item => {
+      if(item.slug === props) {
+        router.push(`/produk/${props}`)
+      }
+    })
+  }
+
   return (
     <>
       <Head>
@@ -34,7 +45,7 @@ export default function Home() {
             </div> */}
             <div className="grid grid-cols-2 gap-6">
               <div className="flex justify-center flex-col">
-                <h2 className="font-semibold text-sm text-gray-800">BUTUH JERIGEN ATAU TONG ? </h2>
+                <h5 className="font-semibold text-sm text-gray-800">BUTUH JERIGEN ATAU TONG ? </h5>
                 <h1 className="font-bold text-6xl">CV UTAMA</h1>
                 <h6 className="font-medium mt-6">Menyediakan bebrbagai jenis tong</h6>
                 <p className="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
@@ -117,6 +128,7 @@ export default function Home() {
                       title = {item.title}
                       deskripsi = {item.deskripsi}
                       img = {`img/${item.img}`}
+                      onClick = {() => OnCLickProduct(item.slug)}
                     />
                   </div>
                 ))}
