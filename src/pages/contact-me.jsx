@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { Layout } from "./components/layout/layout"
+import { Layout } from "@/components/layout/layout"
 
 
 export default function ContactMe() {
@@ -17,7 +17,7 @@ export default function ContactMe() {
             <div className='mt-16'>
               <h1 className='text-5xl text-center font-semibold text-gray-800 '>HUBUNGI KAMI</h1>
               <div className="w-full flex justify-center">
-              <iframe className="rounded-xl mt-14" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9703.798844504234!2d112.35753131660705!3d-8.142805879031297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e789657487bffff%3A0x7c023e1c29128760!2sRS%20WAVA%20HUSADA%20KESAMBEN!5e0!3m2!1sid!2sid!4v1691642455929!5m2!1sid!2sid" width="800" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+              <iframe className="rounded-xl mt-14" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3956.1875548478397!2d112.7358579!3d-7.444490499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e7afbbca0f75%3A0xbea31985382ac7e0!2sCV%20UTAMA%202!5e0!3m2!1sid!2sid!4v1692947511257!5m2!1sid!2sid" width="800" height="500" allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>

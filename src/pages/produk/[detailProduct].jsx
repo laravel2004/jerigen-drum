@@ -1,5 +1,5 @@
 import Head from "next/head"
-import { Layout } from "../components/layout/layout"
+import { Layout } from "@/components/layout/layout";
 import { EnumProduct } from "@/utils/Product/EnumProductDummy"
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
@@ -32,13 +32,16 @@ export default function ContactMe() {
         <Layout>
           <div className='px-4'>
             <div className='mt-16'>
-              <h1 className='text-5xl text-center font-semibold text-gray-800 '>DETAIL PRODUK</h1>
-              <div className="px-80 mt-24">
+              <h1 className='md:text-5xl text-2xl  text-center font-semibold text-gray-800 '>DETAIL PRODUK</h1>
+              <div className="lg:px-80 md:px-10 px-4 mt-24">
                 {data ? 
                   <div className="flex flex-col justify-center items-center">
-                    <img src={`/img/${data.img}`} alt="detail" className="rounded-2xl w-3/4" /> 
+                    <img src={`/img/${data.img}`} alt="detail" className="rounded-2xl md:w-3/4 w-full" /> 
                     <h3 className="text-center text-2xl font-semibold my-14">{data.title}</h3>
                     <div className="text-justify ">{data.detail}</div>
+                    <div className="mt-10">
+                      <a href="https://wa.me/6282230655546" target="_blank">Pesan Product</a>
+                    </div>
                   </div>
                   : null}
               </div>

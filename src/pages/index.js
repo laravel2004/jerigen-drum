@@ -1,14 +1,13 @@
 import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import { Layout } from "./components/layout/layout";
+import { Layout } from "@/components/layout/layout";
 import kolase from "./../../public/img/kolase.png";
 import { Button } from "@material-tailwind/react";
 import murah from "./../../public/img/murah.jpg"
 import quality from "./../../public/img/quality.jpg"
 import cepat from "./../../public/img/cepat.jpg"
-import { CardProduct } from "./components/card/card";
-import { EnumCard } from "@/utils/Card/EnumCardDummy";
+import { CardProduct } from "@/components/card/card";
 import { useRouter } from "next/router";
 import { EnumProduct } from "@/utils/Product/EnumProductDummy";
 
@@ -37,17 +36,12 @@ export default function Home() {
       </Head>
       <main>
         <Layout>
-          <div className="px-10">
-            {/* <div className="mt-16">
-              <h1 className="text-5xl text-center font-semibold title text-gray-800 ">
-                SELAMAT DATANG DI CV UTAMA
-              </h1>
-            </div> */}
-            <div className="grid grid-cols-2 gap-6">
+          <div className="md:px-10 px-4 mt-16">
+            <div className="grid md:grid-cols-2 grid-cols-1 gap-6">
               <div className="flex justify-center flex-col">
-                <h5 className="font-semibold text-sm text-gray-800">BUTUH JERIGEN ATAU TONG ? </h5>
-                <h1 className="font-bold text-6xl">CV UTAMA</h1>
-                <h6 className="font-medium mt-6">Menyediakan bebrbagai jenis tong</h6>
+                <h5 className="font-semibold text-sm text-gray-800 text-center md:text-start">SELAMAT DATANG DI WEBSITE </h5>
+                <h1 className="font-bold md:text-6xl text-4xl text-center md:text-start">CV UTAMA</h1>
+                <h6 className="font-semibold mt-6">Menyediakan berbagai jenis tong</h6>
                 <p className="mt-3"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
                   nam eveniet consequuntur, asperiores placeat non aut? Amet
                   itaque iusto beatae.Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
@@ -58,17 +52,20 @@ export default function Home() {
               <div className="flex justify-center">
                 <img src="/img/ide.jpg" className="w-3/4" />
               </div>
+              {/* <Button color="gray" className="mt-12"> 
+                  Mulai Sekarang
+                </Button> */}
             </div>
             <div className="mt-36 text-center">
-              <h3 className="text-5xl text-center font-semibold title text-gray-800">Distributor Drum</h3>
+              <h3 className="md:text-5xl text-2xl text-center font-semibold title text-gray-800">Distributor Drum</h3>
             </div>
-            <div className="flex gap-6 mt-14">
-              <Image src={kolase} alt="kolase" className="rounded-xl w-2/4 brightness-50 hue-rotate-30" />
+            <div className="flex flex-col md:flex-row gap-6 mt-14">
+              <Image src={kolase} alt="kolase" className="rounded-xl md:w-2/4 w-full brightness-50 hue-rotate-30" />
               <div className="flex flex-col justify-center gap-6">
-                <h3 className="text-gray-800 text-2xl font-medium sub-title">
+                <h3 className="text-gray-800 md:text-2xl text-lg text-center md:text-start font-medium sub-title ">
                   Menyediakan berbagai jenis tong dan juga jerigen
                 </h3>
-                <div className="mt-10">
+                <div className="md:mt-10 mt-2 text-justify">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
                   nam eveniet consequuntur, asperiores placeat non aut? Amet
                   itaque iusto beatae.Lorem ipsum dolor sit amet consectetur
@@ -78,8 +75,8 @@ export default function Home() {
                   consequuntur, asperiores placeat non aut? Amet itaque iusto
                   beatae.
                 </div>
-                <div className="mt-10">
-                  <Button variant="filled" onClick={() => router.push("/produk") }  color="deep-purple" className="flex items-center gap-2">
+                <div className="md:mt-10 mt-2">
+                  <Button variant="filled" onClick={() => router.push("/produk") }  color="gray" className="flex items-center gap-2">
                     Lihat Product
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -101,17 +98,17 @@ export default function Home() {
             </div>
             {/* content kedua */}
             <div className="mt-24">
-              <h3 className="text-5xl text-center font-semibold title text-gray-800">Kenapa harus beli disini </h3>
-              <div className="flex gap-8 w-full mt-10 ">
-                <div className="w-1/3">
+              <h3 className="md:text-5xl text-2xl text-center font-semibold title text-gray-800">Kenapa harus beli disini </h3>
+              <div className="flex flex-col md:flex-row justify-center gap-8 w-full mt-10 ">
+                <div className="md:w-1/3">
                   <Image src={quality} alt="quality" />
                   <p className="text-center text-lg sub-title font-medium">Kualitas Terjamin</p>
                 </div>
-                <div className="w-1/3">
+                <div className="md:w-1/3">
                   <Image src={murah} alt="murah" />
                   <p className="text-center text-lg sub-title font-medium">Harga Terjangkau</p>
                 </div>
-                <div className="w-1/3">
+                <div className="md:w-1/3">
                   <Image src={cepat} alt="cepat" />
                   <p className="text-center text-lg sub-title font-medium">Pengiriman Cepat</p>
                 </div>
@@ -120,8 +117,8 @@ export default function Home() {
 
             {/* content ketiga */}
             <div className="mt-24">
-              <h3 className="text-5xl text-center font-semibold title text-gray-800">Produk Kami</h3>
-              <div className="mt-16 grid grid-cols-3 gap-4">
+              <h3 className="md:text-5xl text-2xl text-center font-semibold title text-gray-800">Produk Kami</h3>
+              <div className="mt-16 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                 {dummyCard.map((item, index) => (
                   <div className="w-full flex justify-center" key={index}>
                     <CardProduct

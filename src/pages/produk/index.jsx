@@ -1,7 +1,7 @@
 import Head from "next/head"
-import { Layout } from "../components/layout/layout"
+import { Layout } from "@/components/layout/layout"
 import { EnumProduct } from "@/utils/Product/EnumProductDummy"
-import { CardProduct } from "../components/card/card"
+import { CardProduct } from "@/components/card/card"
 import { useRouter } from "next/router"
 import { list } from "postcss"
 
@@ -30,8 +30,8 @@ export default function Product() {
         <Layout>
           <div className='px-4'>
             <div className='mt-16'>
-              <h1 className='text-5xl text-center font-semibold text-gray-800 '>PRODUCT KAMI</h1>
-              <div className="mt-24 grid grid-cols-3 gap-4">
+              <h1 className='md:text-5xl text-2xl text-center font-semibold text-gray-800 '>PRODUCT KAMI</h1>
+              <div className="mt-24 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
                 {enumProduct.map((item, index) => (
                   <div key={index} className="flex justify-center">
                     <CardProduct
